@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+}
+ul {
+  margin: 0;
+}
+.danhmuc {
+  background-color: #2fa4e7;
+}
+
+.danhmuc-danhsach {
+  display: flex;
+  list-style: none;
+}
+.danhmuc-muc {
+  margin: 10px;
+}
+.danhmuc-lienket {
+  color: while;
+  text-decoration: none;
+  font-size: x-larger;
+  font-weight: bold;
+}
+.danhmuc-lienket:hover {
+  color: grey;
+}
+.logo {
+  width: 80px;
+  background-color: grey;
+}
+.logo {
+  height: 80%;
+  background-color: aqua;
+}
+main {
+  display: flex;
+}
+.noidung-trai {
+  height: 1000px;
+  background-color: aqua;
+  width: 80%;
+  border-radius: 10px;
+}
+.noidung-phai {
+  height: 1000px;
+  background-color: chocolate;
+  width: 20%;
+}
+.tieude {
+  background-color: cornflowerblue;
+  padding: 20px;
+  color: while;
+  font-size: x-large;
+  font-weight: bold;
+  border-radius: 10px 10px 0px 0px;
+}
+.tintuc-danhsach {
+  display: flex;
+  justify-content: space-around;
+}
+.baiviet {
+  height: 200px;
+  background-color: aquamarine;
+  width: 32%;
+}
