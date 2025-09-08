@@ -27,6 +27,7 @@ ul {
 .logo {
   width: 80px;
   background-color: grey;
+  margin: center;
 }
 .logo {
   height: 80%;
@@ -63,3 +64,4 @@ main {
   background-color: aquamarine;
   width: 32%;
 }
+.

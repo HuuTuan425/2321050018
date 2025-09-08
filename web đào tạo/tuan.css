@@ -1,0 +1,392 @@
+body {
+  margin: 0;
+}
+/* danh muc  */
+ul {
+  margin: 0;
+}
+.danhmuc {
+  background-color: #2fa4e7;
+}
+
+.danhmuc-danhsach {
+  display: flex;
+  list-style: none; /* bỏ dấu chấm ở đằng trước */
+}
+
+.muc {
+  margin: 15px; /* cạch giữa các phần tử một khoảng */
+}
+.anh1 {
+  width: 380px;
+  height: 180px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.anh2 {
+  width: 380px;
+  height: 180px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.anh3 {
+  width: 380px;
+  height: 180px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.muc1 {
+  color: while; /* màu của chư */
+  text-decoration: none; /* bỏ gạch chân */
+  font-size: x-larger;
+  font-weight: bold;
+}
+
+.muc1 :hover {
+  color: grey;
+}
+
+/* phần logo  */
+.logo {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  margin: 2px;
+}
+.logo_img {
+  width: 80px;
+  height: 90px;
+  margin-top: 2px;
+}
+
+.noidung1 {
+  color: #1553a6;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.noidung2 {
+  color: blueviolet;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 3px;
+}
+
+.dong1 {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-60deg, #e0f3ff 70%, #ffffff 70%);
+}
+
+.dong3 {
+  height: 5px;
+  background-color: white;
+  margin: 20px;
+}
+/* phần main  */
+main {
+  display: flex;
+}
+
+.phanbentrai {
+  height: 1000px;
+  background-color: white;
+  width: 80%;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.phanbenphai {
+  height: 1000px;
+  background-color: #e0f3ff;
+  width: 20%;
+  border-radius: 10px;
+}
+
+.tieude {
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  color: white;
+  background: #2fa4e7;
+}
+
+.baiviet {
+  display: flex;
+  justify-content: space-around;
+}
+
+.baiviet1 {
+  height: 200px;
+  background-color: white;
+  width: 32%;
+}
+
+/* .tb {
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px 6px 0px 0px;
+  color: white;
+  background: #2fa4e7;
+  margin-top: 5px;
+  margin-bottom: 10px;
+} */
+
+.anhthongbao {
+  width: 400px;
+  height: 200px;
+}
+.date {
+  margin-left: 20px;
+}
+.thongbao-list {
+  display: flex;
+  padding: 6px;
+  background: #fff;
+}
+
+.trai {
+  width: 25%;
+  padding: 8px;
+}
+
+.phai {
+  margin-left: 10px;
+  flex: 1;
+}
+
+.date {
+  margin-top: 6px;
+  text-align: right;
+  font-size: 1.4rem;
+  color: #555;
+  margin-left: 10px;
+}
+
+.thongbaothuctap {
+  display: inline-block;
+  margin-top: 12px;
+  color: cyan;
+  font-weight: 700;
+}
+
+.thongbao1 {
+  height: 150px;
+  width: 200;
+}
+
+.phai {
+  margin-left: 10px;
+  flex: 1;
+}
+.list {
+  margin-right: auto;
+  text-decoration: none;
+}
+/* .caclist {
+  border-left: 1px solid ; 
+  border-bottom: 1px solid ; 
+  
+
+} */
+.list:hover {
+  text-decoration: underline;
+}
+.listthu {
+  border-bottom: 0.5px solid;
+  border-top: 0.5px solid;
+  border-bottom: 0.5px solid;
+  border-left: 0.5px solid;
+  list-style: none;
+}
+
+/* .hd {
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px 6px 0px 0px;
+  color: white;
+  background: #2fa4e7;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  /* background-color:aliceblue; */
+*/ .dong6 {
+  background-color: aliceblue;
+  height: 180px;
+}
+.hd2 {
+  text-decoration: none;
+  margin-bottom: 5px;
+  gap: 5px;
+}
+
+.phandangnhap {
+  font-weight: bold;
+  padding: 10px;
+  color: white;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background: #2fa4e7;
+}
+
+/* .nhapmk {
+    width: 90%;
+    min-width: 90px;
+    padding: 6px 12px;
+    border: 1px;
+    display: block;
+    margin-top: 5px;
+  } */
+/* .phannhapthongtin {
+    width: 300px;
+  } */
+
+.nhaptk {
+  padding: 6px;
+  display: block;
+  /* margin-bottom: 8px; */
+  border-radius: 5px;
+  border: none;
+  margin: 10px 10px;
+  width: 260px;
+}
+.nhapmk {
+  padding: 6px;
+  display: block;
+  /* margin-bottom: 8px; */
+  border-radius: 5px;
+  border: none;
+  margin: 10px 10px;
+  width: 260px;
+}
+
+.nutdangnhap {
+  background: blueviolet;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 5px 5px;
+  padding: 2px;
+}
+
+.qmk {
+  text-align: right;
+  color: black;
+  width: 280px;
+}
+
+.caidat {
+  background: #2fa4e7;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+
+  margin-bottom: 20px;
+  border-radius: 6px 6px 0px 0px;
+}
+.dong7 {
+  background-color: antiquewhite;
+  margin-bottom: 20px;
+}
+
+/* .dn1 {
+  width: 250px;
+} */
+
+.nutdangnhap1 {
+  padding: 12px 10px;
+  display: block;
+  /* margin-bottom: 8px; */
+  border-radius: 5px;
+  background-color: #2fa4e7;
+  border: none;
+  color: white;
+  text-align: center;
+  margin: 0 10px;
+  width: 260px;
+}
+.nutdangnhap2 {
+  padding: 12px;
+  display: block;
+  /* margin-bottom: 8px; */
+  border-radius: 5px;
+  background-color: #2fa4e7;
+  border: none;
+  color: white;
+  text-align: center;
+  margin: 3px 10px;
+  width: 260px;
+}
+
+.dong8 {
+  background-color: #e0f3ff;
+  margin-bottom: 20px;
+}
+
+.qr1 {
+  text-align: center;
+  padding: 15px 50px; /* khoảng cách trên dưới ; trái phải */
+}
+
+.qr2 {
+  text-align: center;
+  padding: 10px 50px; /* khoảng cách trên dưới ; trái phải */
+}
+
+.cuoi {
+  background: #2fa4e7;
+  color: white;
+  padding: 20px;
+}
+
+.huongdan1 {
+  list-style: none;
+}
+
+.caclist {
+  list-style: none;
+}
+.phanbenphai {
+  background-color: #e0f3ff;
+}
+.caclist span {
+  display: block;
+  text-align: right;
+}
+/* .footer {
+  padding: 30px;
+  background: #2fa4e7;
+} */
+.thoigian {
+  background-color: aquamarine;
+  margin-bottom: 5px;
+  margin-top: 3px;
+}
+.v1 {
+  background-color: aquamarine;
+  /* margin-bottom: 2px; */
+  margin-top: 5px;
+}
+/* .v2 {
+  background-color: aquamarine;
+  /* margin-bottom: 2px; */
+/* margin-top: 5px; */
+.ngay {
+  margin-right: 5px;
+}
