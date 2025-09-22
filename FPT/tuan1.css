@@ -113,21 +113,21 @@ footer {
   color: #fff;
   font-family: Arial, sans-serif;
 }
-.phancuoi {
+.phancuoi1 {
   display: flex;
   justify-content: space-between;
   flex: 1;
   gap: 40px;
-  align-items: flex-start;
+  /* flex-direction: column; */
 }
-
 .cot {
-  margin: 0 20px;
-  flex: 1;
-  display: block;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
-.cot ul li a {
-  display: block;
+/* .cot ul li a { */
+/* display: block;
   text-decoration: none;
   color: #ccc;
 }
@@ -135,4 +135,22 @@ footer {
   list-style: none;
   padding: 0;
   margin: 0;
+} */
+
+/* .cuoicung {
+  margin-top: 20px;
+} */
+
+.cuoi2 {
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.phancuoi {
+  justify-content: space-between;
+}
+/* .cot {
+} */
+.cot1 {
+  display: flex;
+  flex-direction: column;
 }

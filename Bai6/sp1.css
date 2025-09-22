@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  color: white;
+}
+.container {
+  width: 30%;
+  margin: auto;
+  height: 700px;
+  background-color: blue;
+}
+.noidung {
+  width: 70%;
+  background-color: green;
+  height: 500px;
+  margin: auto;
+}
+.form {
+  width: 80%;
+  background-color: black;
+  margin: auto;
+}
+.khoinut {
+    margin-bottom: 15px;
+  }
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  border: 2px solid white;
+}
+.
