@@ -55,8 +55,9 @@
       var myString = "hello Tuan";
       document.write(myString[1] + "<br>");
       document.write(myString.slice(1, 3) + "<br>");
-
+      // thay  the 
       document.write(myString.replace("hello", "Hi") + "<br>");
+      // chuyen chu hoa
       document.write(myString.toLowerCase() + "<br>");
       //indeXOf :TRA RA VI TRI DAU TIEN CUA KI TU:1 hoac -1
       document.write(myString.indexOf("e") + "<br>");
@@ -64,7 +65,7 @@
 
       document.write(myString.includes("e") + "<br>");
       //   tach chuoi thanh mang
-      document.write(myString.split("") + "<br>");
+      document.write(myString.split('') + "<br>");
       let danhsach = ["Nguyen Van A", "Vu Van B", "Truong Van C"];
       document.write(danhsach[1].startsWith("Nguyen") + "<br>");
       //chuyen chuoi ve so
@@ -74,19 +75,24 @@
       //parselnt:chuyen doi so thanh so nguyen
       // pi.toFixed:dinh dang so voi chu so thap phan
       var pi = 3.14159;
+      //lam tron 2 chu so thap phan 
       document.write(pi.toFixed(2) + "<br>");
+      //   parseFloat:chuyen doi so thanh so thuc
+      //   toString:chuyen doi so thanh chuoi
+      // document.write((123).toString() + "<br>");
       //kiem tra so
       //   isNaN():Kiem tra xem 1 gia tri cs phai la NaN hay ko
       // is Finite(): Kiem tra xem 1 gia tri co phai la so huu han hay ko
       // is NaN(NaN)://ket qua :true;
       //   isFinite(10);//ket qua:true
       // ham date()
-      let today = new Date();
+      let today = new Date(2025, 9, 28);
+      document.write(today +"<br>");
+      document.write(today.getMonth()+"<br>");
       document.write(today.getFullYear() + "<br>");
       document.write(today.getDate() + "<br>");
       document.write(today.getDay() + "<br>");
       //   document.write("23/9/2025");
-
       //   document.write(myString[1] + "<br>");
     </script>
   </body>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let hN= new Date(2025,9,28);
+        document.write(hN+"<br>");
+        document.write(hN-1+"<br>");
+        //mảng
+        let arr=[1,2,3,4,5,6,'a','b','c'];
+        // let a ='abc';
+        // Kiểm tra độ dài của mảng 
+        document.write(arr.length+"<br>");
+        // lấy phần tử của mảng theo chỉ số 
+        document.write(arr[3]+"<br>");
+        console.log(arr[3]+"\n");
+        // trả về chỉ số đầu tiên của mảng 
+        document.write(arr.indexOf('a')+"<br>");
+        // tìm kiến trong mảng có một giá trị nào đó hay khong 
+        document.write(arr.includes("1")+"<br>");
+        //Lấy phần tử cuối của mảng  theo chỉ số
+        document.write(arr.lastIndexOf('c')+"<br>");
+        // isArray(): Kiểm tra xem một giá trị có phải là một mảng hay không.
+        document.write(Array.isArray(arr)+"<br>");
+        //concat :
+        let a,b,c,d,e;
+        a= [1,3,3];
+        b="javaScript";
+        c=[42,'VBJavascript'];
+        d=a.concat(b,c);
+        // document.write(d+"<br>");
+        // document.write(a+"<br>");
+        // join: Nối tất cả các phần tử của mảng thành một chuỗi.
+        document.write(Array.isArray(d)+"<br>");
+        document.write(d.join(" /")+"<br>");
+        //pop: bỏ phần tử của mảng và trả về phần tử đó.
+        // e=d.pop();
+        // document.write(d.pop()+"<br>");
+        //thêm vào vị trí cuối cùng :push
+        d.push("tuan");
+        document.write(d+"<br>");
+        // reverse: đảo ngược vị trí của mảng 
+        d.reverse();
+         d[3]=4;
+        document.write(d+"<br>");
+        /*  shift: xóa phần tử đầu tiên :ar.shift();
+            unshift:thêm phần tử vào dầu trang : arr.unshift(0);
+        */
+   
+    //    câu lệnh if else : câu điều kiện
+    true && false //false
+    let homNay=new Date();
+    let now=homNay.getHours();
+    if(now<10){
+        document.write("chao buổi sáng"+"<br>");
+    }
+    else if((now >=10) && (now <12)){
+        document.write("chào buổi trưa"+"<br>");
+    }
+    else if ((now>=12) && (now <17)){
+        document.write("chào buổi chiều"+"<br>");
+    }
+    else if ((now>=17) && (now <22)){
+        document.write("chào buổi tối"+"<br>");
+    }
+    else{
+        document.write("chào buổi đêm"+"<br>");
+    }
+
+// kiểm tra số chẵn lẻ 
+    let so= "1000000000000000000003";
+    // document.write(so[so.length-1]+"<br>");
+    let soCuoiCung=parseInt(so[so.length-1]);
+    if(soCuoiCung %2 ==0){
+        document.write( "là số chẵn"+"<br>");
+    }
+    else{
+        document.write("là số lẻ"+"<br>");
+    }
+    </Script>
+</body>
+</html>
