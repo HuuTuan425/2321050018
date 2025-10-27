@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .yeu-cau {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Tính chỉ số BMI</h1>
+    <p>Công thức: Cân năng / (Chiều cao * Chiều cao)</p>
+    <p>Cân nặng: Kg</p>
+    <p>Chiều cao: m</p>
+
+    <div class="yeu-cau">
+      <p>Tạo input cho phép nhập vào chiều cao cân nặng</p>
+      <p>Tạo nút bấm kiểm tra chỉ số BMI</p>
+      <p>
+        Trường hợp 1: Người dùng không nhập hoặc nhập sai thông tin phải cảnh
+        báo
+      </p>
+      <p>
+        Trường hợp 2: Nhập đúng, hiển thị được chỉ số BMI và hình ảnh tương ứng
+      </p>
+    </div>
+    <h2>Tinh chi so BMI</h2>
+    Chiều cao :
+    <input type="text" id="chieu-cao" placeholder="moi nhap chieu cao" /> m
+    <br />
+    Cân nặng :
+    <input type="text" id="can-nang" placeholder="Moi nhao can nang" /> Kg
+    <br />
+    <button onclick="tinhbmi()">Kiểm tra</button>
+    <div>kết quả :<input type="text" id="ketqua" /></div>
+    <script>
+      function xemketqua() {
+        let chieucao = parseFloat(document.getElementById("chieu-cao").value);
+        let cannang = parseFloat(document.getElementById("can-nang").value);
+
+        let kq = tinhbmi(chieucao, cannang);
+        document.getElementById("ketqua").value;
+      }
+      function kiemtra(chieucao, cannang) {
+        let ketqua = true;
+        if (chieucao <= 0 || typeof chieucao != "number") {
+          document.write(" Chiều cao không hợp lệ ");
+          ketqua = false;
+        }
+        if (cannang <= 0 || typeof cannang != "number") {
+          document.write(" Cân nặng không hợp lệ ");
+          ketqua = false;
+        }
+
+        return ketqua;
+      }
+      function tinhbmi(chieucao, cannang) {
+        let BMI;
+        if (kiemtra(chieucao, cannang) == false) {
+          promt(" Ban chua nhap du thong tin,sai  ");
+        } else {
+          BMI = cannang / (chieucao * chieucao);
+          if (BMI < 18.5) {
+            document.write(" Ban bi thieu can ");
+            <img src="./thieucan.jpg" alt="thieu can" />
+          } else if (BMI >= 18.5 && BMI < 24.9) {
+            document.write(" Ban binh thuong ");
+            <img
+          } else if (BMI >= 25 && BMI < 29.9) {
+            document.write(" Ban bi thua can ");
+          } else {
+            document.write(" Ban bi beo phi ");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

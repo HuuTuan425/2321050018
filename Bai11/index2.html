@@ -28,54 +28,56 @@
         let diemA = parseFloat(document.getElementById("diemA").value);
         let diemB = parseFloat(document.getElementById("diemB").value);
         let diemC = parseFloat(document.getElementById("diemC").value);
-        tinhtongdiem(diemA, diemB, diemC);
+        let kq = tinhtongdiem(diemA, diemB, diemC);
+        document.getElementById("ketqua").value = kq;
+      }
+      function Kiemtraketqua(a, b, c) {
+        if (a < 0 || a > 10 || isNaN(a)) {
+          alert("Điểm A không hợp lệ!");
+          return false;
+        }
+        if (b < 0 || b > 10 || isNaN(b)) {
+          alert("Điểm B không hợp lệ !");
+          return false;
+        }
+        if (c < 0 || c > 10 || isNaN(c)) {
+          alert("Điểm C không hợp lệ!");
+          return false;
+        }
+        return true;
       }
 
       function tinhtongdiem(a, b, c) {
         let tong;
-        if (kiemtrahople(a, b, c) == true) {
+        if (Kiemtraketqua(a, b, c) == false) {
+          return " Điểm không hợp lệ ";
+        } else {
           tong = a * 0.6 + b * 0.3 + c * 0.1;
           if (tong >= 9) {
-            document.write("diem chu la A+ ");
+            return tong + "-" + "điểm chữ là A+ ";
           } else if (tong >= 8.5 && tong < 9) {
-            document.write("diem chu la A ");
+            return tong + "-" + "điểm chữ là A ";
           } else if (tong >= 8 && tong < 8.5) {
-            document.write("diem chu la B+ ");
+            return tong + "-" + "điểm chữ là B+ ";
           } else if (tong >= 7.5 && tong < 8) {
-            document.write("diem chu la B ");
+            return tong, "-", "điểm chữ là B ";
           } else if (tong >= 7 && tong < 7.5) {
-            document.write("diem chu la C+ ");
+            return tong, "-", "điểm chữ là C+ ";
           } else if (tong >= 6.5 && tong < 7) {
-            document.write("diem chu la C ");
+            return tong + "-" + "điểm chữ là C ";
           } else if (tong >= 6 && tong < 6.5) {
-            document.write("diem chu la D+ ");
+            return tong + "-" + "điểm chữ là D+ ";
           } else if (tong >= 5 && tong < 6) {
-            document.write("diem chu la D ");
+            return tong + "-" + "điểm chữ là D ";
           } else {
-            document.write("diem chu la F ");
+            return tong + "-" + "điểm chữ là F ";
           }
         }
-        function kiemtrahople(a, b, c) {
-          let ketqua = true;
-          if (a < 0 || a > 10 || typeof a != "number") {
-            document.write("Điểm A không hợp lệ!");
-            ketqua = false;
-          }
-        }
-        if (b < 0 || b > 10 || typeof b != "number") {
-          document.write("Điểm B không hợp lệ !");
-          ketqua = false;
-        }
-        if (c < 0 || c > 10 || typeof c != "number") {
-          document.write("Điểm C không hợp lệ!");
-          ketqua = false;
-        }
-        return ketqua;
       }
-      //   let a = 3;
-      //   let b = 2;
-      //   let c = 11;
-      tinhtongdiem(a, b, c);
+      //   //   let a = 3;
+      //   //   let b = 2;
+      //   //   let c = 11;
+      //   tinhtongdiem(a, b, c);
     </script>
   </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai 11:</title>
+  </head>
+  <body>
+    <h2>Điểm của sinh viên là</h2>
+    <div>
+      Điểm A:<input type="number" id="diemA" placeholder="Mời nhập điểm A" />
+    </div>
+    <div>
+      Điểm B:<input type="number" id="diemB" placeholder="Mời nhập điểm B" />
+    </div>
+    <div>
+      Điểm C:<input type="number" id="diemC" placeholder="Mời nhập điểm C" />
+    </div>
+    <div>
+      <button onclick="xemketqua()">Tính điểm</button>
+    </div>
+    <div>kết quả :<input type="text" id="ketqua" size="30" readonly /></div>
+
+    <script>
+      // 1. HÀM CHÍNH: Lấy điểm, gọi hàm tính, và HIỂN THỊ kết quả
+      function xemketqua() {
+        let diemA = parseFloat(document.getElementById("diemA").value);
+        let diemB = parseFloat(document.getElementById("diemB").value);
+        let diemC = parseFloat(document.getElementById("diemC").value);
+
+        // Gọi hàm tinhtongdiem và nhận KẾT QUẢ TRẢ VỀ (là một chuỗi)
+        let ketQuaChuoi = tinhtongdiem(diemA, diemB, diemC);
+
+        // *** ĐÂY LÀ THAY ĐỔI QUAN TRỌNG ***
+        // Gán chuỗi kết quả đó vào ô input "ketqua"
+        document.getElementById("ketqua").value = ketQuaChuoi;
+      }
+
+      // 2. HÀM KIỂM TRA: (Đã sửa lỗi cú pháp và logic)
+      //    Hàm này phải được định nghĩa TÁCH BIỆT, không phải bên trong hàm khác
+      function kiemtrahople(a, b, c) {
+        // Dùng isNaN() để kiểm tra xem có phải là số không
+        if (isNaN(a) || a < 0 || a > 10) {
+          // Dùng alert() để báo lỗi, không dùng document.write()
+          alert("Điểm A không hợp lệ!");
+          return false;
+        }
+        if (isNaN(b) || b < 0 || b > 10) {
+          alert("Điểm B không hợp lệ !");
+          return false;
+        }
+        if (isNaN(c) || c < 0 || c > 10) {
+          alert("Điểm C không hợp lệ!");
+          return false;
+        }
+
+        // Nếu tất cả đều ổn
+        return true;
+      }
+
+      // 3. HÀM TÍNH TOÁN: (Đã sửa lại để TRẢ VỀ kết quả)
+      function tinhtongdiem(a, b, c) {
+        let tong;
+
+        // Gọi hàm kiểm tra
+        if (kiemtrahople(a, b, c) == false) {
+          // Nếu điểm không hợp lệ, trả về một chuỗi lỗi
+          return "Lỗi! Điểm không hợp lệ.";
+        }
+
+        // Nếu điểm hợp lệ, bắt đầu tính toán
+        tong = a * 0.6 + b * 0.3 + c * 0.1;
+        let tongLamTron = tong.toFixed(2); // Làm tròn 2 chữ số thập phân
+
+        // *** ĐÂY LÀ THAY ĐỔI QUAN TRỌNG ***
+        // Thay vì document.write(), dùng "return" để trả chuỗi kết quả về
+        if (tong >= 9) {
+          return `Tổng: ${tongLamTron} - Điểm chữ là A+`;
+        } else if (tong >= 8.5 && tong < 9) {
+          return `Tổng: ${tongLamTron} - Điểm chữ là A`;
+        } else if (tong >= 8 && tong < 8.5) {
+          return `Tổng: ${tongLamTron} - Điểm chữ là B+`;
+        } else if (tong >= 7.5 && tong < 8) {
+          return `Tổng: ${tongLamTron} - Điểm chữ là B`;
+        } else if (tong >= 7 && tong < 7.5) {
+          return `Tổng: ${tongLamTron} - Điểm chữ là C+`;
+        } else if (tong >= 6.5 && tong < 7) {
+          return `Tổng: ${tongLamTron} - Điểm chữ là C`;
+        } else if (tong >= 6 && tong < 6.5) {
+          return `Tổng: ${tongLamTron} - Điểm chữ là D+`;
+        } else if (tong >= 5 && tong < 6) {
+          return `Tổng: ${tongLamTron} - Điểm chữ là D`;
+        } else {
+          return `Tổng: ${tongLamTron} - Điểm chữ là F`;
+        }
+      }
+    </script>
+  </body>
+</html>

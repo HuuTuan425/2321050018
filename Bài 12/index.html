@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anh,.tuan{
+            display:flex;
+            justify-content:center;
+        
+        }
+        img {
+             width:300px;
+             height:200px;
+             
+        }
+        h2,h3{
+            text-align:center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Ví dụ trên </h3>
+        <div class="anh">
+            <img src="./ahhhhhhhh1.jpg" alt="ảnh 1"> 
+        </div>
+        <h2>Chế độ : sáng</h2>
+        
+        </style>
+        <div class="tuan">
+            <button onclick="doiCheDo()">Đổi chế độ</button>
+        </div>
+    </div>
+    <script>
+        let cheDo=true;
+        function doiCheDo(){
+            if(cheDo==true){
+                document.getElementsByTagName('body')[0].style='background-color:black';
+                document.getElementsByTagName('h2')[1].innerHTML='Chế độ : tối';
+                document.getElementsByTagName('h2')[0].style='color:white';
+                document.getElementsByTagName('h2')[1].style='color:white';   
+                document.getElementsByTagName('img')[0].src='./tuan.jpg';  
+                cheDo=false 
+            }
+            else{
+                document.getElementsByTagName('body')[1].style='background-color:white';
+                document.getElementsByTagName('h2')[0].innerHTML='Chế độ : sáng';
+                document.getElementsByTagName('h2')[1].style='color:black';
+                document.getElementsByTagName('h2')[0].style='color:black';  
+                document.getElementsByTagName('img')[1].src='ahhhhhhhh1.jpg'; 
+                cheDo=true;  
+            }
+        }
+            
+    </script>
+</body>
+</html>
