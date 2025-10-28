@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* align-items: flex-start; */
+        margin: 20px;
+        background-color: burlywood;
+        border-radius: 20px;
+        max-width: 500px;
+      }
+      .bentrai {
+        width: 50%;
+        margin: 10px;
+        border-right: 2px solid black;
+      }
+      .benphai {
+        width: 50%;
+        margin: 10px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+      }
+      .chieucao {
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+      button {
+        margin-top: 10px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+      }
+      #thongbao {
+        margin: 10px 20px 5px 30px;
+        color: red;
+        font-weight: bold;
+      }
+      .cannang {
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bài làm</h1>
+    <div class="container">
+      <div class="bentrai">
+        <h2>Tính chỉ số BMI</h2>
+        <div class="chieucao">
+          Nhập vào chiều cao:<br />
+          <input type="text" id="ccao" placeholder="Nhap mau  vd :1.70" />
+        </div>
+        <div class="cannang">
+          Nhập vào cân nặng:<br />
+          <input type="text" id="cnang" placeholder="Nhap mau vd :50" /><br />
+          <div><button type="submit" onclick="tinhBMI()">Kiểm tra</button></div>
+        </div>
+        <div>
+          <p id="thongbao"></p>
+        </div>
+      </div>
+      <div class="benphai">
+        <img id="hinh" src="" />
+      </div>
+    </div>
+    <script>
+      function xemkqua() {
+        let chieucao = parseFloat(document.getElementById("ccao").value);
+        let cannang = parseFloat(document.getElementById("cnang").value);
+        // document.getElementsByClassName("chieucao");
+
+        let ketQua = document.getElementById("thongbao");
+        let anh = document.getElementById("hinh");
+      }
+      function kiemtra(chieucao, cannang) {
+        let ketQua = true;
+        if (
+          chieucao < 1.0 ||
+          chieucao > 3.0 ||
+          chieucao <= 0 ||
+          isNaN(chieucao)
+        ) {
+          // document.write(" Chiều cao không hợp lệ ");
+          document.getElementById("thongbao").innerHTML +=
+            " Chiều cao không hợp lệ <br> ";
+          ketQua = false;
+        }
+        if (cannang > 200 || cannang <= 0 || isNaN(cannang)) {
+          // document.write(" Cân nặng không hợp lệ ");
+          document.getElementById("thongbao").innerHTML +=
+            " Cân nặng không hợp lệ ";
+          ketQua = false;
+        }
+        return ketQua;
+      }
+      function tinhBMI() {
+        let chieucao = parseFloat(document.getElementById("ccao").value);
+        let cannang = parseFloat(document.getElementById("cnang").value);
+
+        let ketQua = document.getElementById("thongbao");
+        let anh = document.getElementById("hinh");
+
+        let bmi;
+        if (kiemtra(chieucao, cannang) == false) {
+          return " bạn nhập thông tin sai ";
+        } else {
+          bmi = cannang / (chieucao * chieucao);
+          document.getElementById("thongbao").innerHTML =
+            "Chỉ số BMI của bạn là: " + bmi.toFixed(2) + "<br>";
+        }
+        if (bmi < 18.5) {
+          document.getElementById("hinh").src = "thieu.png";
+          document.getElementById("thongbao").innerHTML += "Bạn bị thiếu cân";
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+          document.getElementById("hinh").src = "binhthuong.png";
+          document.getElementById("thongbao").innerHTML +=
+            "Bạn có cân nặng bình thường";
+        } else if (bmi >= 25 && bmi < 29.9) {
+          document.getElementById("hinh").src = "thua.png";
+          document.getElementById("thongbao").innerHTML += "Bạn bị thừa cân";
+        } else if (bmi >= 30 && bmi < 39.9) {
+          document.getElementById("hinh").src = "beocapdo1.png";
+          document.getElementById("thongbao").innerHTML +=
+            "Bạn bị béo phì cấp độ 1-2 ";
+        } else {
+          document.getElementById("hinh").src = "beonang.png";
+          document.getElementById("thongbao").innerHTML +=
+            "Bạn bị béo phì nặng ";
+        }
+      }
+    </script>
+  </body>
+</html>
