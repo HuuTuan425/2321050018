@@ -9,25 +9,29 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        /* align-items: flex-start; */
         margin: 20px;
         background-color: burlywood;
         border-radius: 20px;
         max-width: 500px;
       }
+
       .bentrai {
         width: 50%;
         margin: 10px;
         border-right: 2px solid black;
+        border: 2px solid black;
+        padding: 10px 10px 20px 10px;
+        border-radius: 20px;
       }
       .benphai {
         width: 50%;
         margin: 10px;
         border: 1px solid black;
+        border-radius: 20px;
         display: flex;
         justify-content: center;
-        /* align-items: center; */
       }
+
       .chieucao {
         margin-bottom: 10px;
         margin-top: 5px;
@@ -40,7 +44,7 @@
       }
       #thongbao {
         margin: 10px 20px 5px 30px;
-        color: red;
+        color: green;
         font-weight: bold;
       }
       .cannang {
@@ -52,7 +56,7 @@
         height: auto;
       }
       h1 {
-        text-align: center;
+        margin-left: 100px;
       }
     </style>
   </head>
@@ -74,6 +78,7 @@
           <p id="thongbao"></p>
         </div>
       </div>
+      <hr />
       <div class="benphai">
         <img id="hinh" src="" />
       </div>
@@ -82,8 +87,6 @@
       function xemkqua() {
         let chieucao = parseFloat(document.getElementById("ccao").value);
         let cannang = parseFloat(document.getElementById("cnang").value);
-        // document.getElementsByClassName("chieucao");
-
         let ketQua = document.getElementById("thongbao");
         let anh = document.getElementById("hinh");
       }
@@ -95,15 +98,13 @@
           chieucao <= 0 ||
           isNaN(chieucao)
         ) {
-          // document.write(" Chiều cao không hợp lệ ");
           document.getElementById("thongbao").innerHTML +=
-            " Chiều cao không hợp lệ <br> ";
+            " Chiều cao không hợp lệ <br> Vui lòng nhập lại chiều cao<br>";
           ketQua = false;
         }
         if (cannang > 200 || cannang <= 0 || isNaN(cannang)) {
-          // document.write(" Cân nặng không hợp lệ ");
           document.getElementById("thongbao").innerHTML +=
-            " Cân nặng không hợp lệ ";
+            " Cân nặng không hợp lệ <br> Vui lòng nhập lại cân nặng ";
           ketQua = false;
         }
         return ketQua;
@@ -112,15 +113,12 @@
         let chieucao = parseFloat(document.getElementById("ccao").value);
         let cannang = parseFloat(document.getElementById("cnang").value);
 
-        let ketQua = document.getElementById("thongbao");
-        let anh = document.getElementById("hinh");
-
         let bmi;
         if (kiemtra(chieucao, cannang) == false) {
           return " bạn nhập thông tin sai ";
         } else {
           bmi = cannang / (chieucao * chieucao);
-          document.getElementById("thongbao").innerHTML =
+          document.getElementById("thongbao").innerHTML +=
             "Chỉ số BMI của bạn là: " + bmi.toFixed(2) + "<br>";
         }
         if (bmi < 18.5) {
@@ -130,10 +128,10 @@
           document.getElementById("hinh").src = "binhthuong.png";
           document.getElementById("thongbao").innerHTML +=
             "Bạn có cân nặng bình thường";
-        } else if (bmi >= 25 && bmi < 29.9) {
+        } else if (bmi >= 24.9 && bmi < 29.9) {
           document.getElementById("hinh").src = "thua.png";
           document.getElementById("thongbao").innerHTML += "Bạn bị thừa cân";
-        } else if (bmi >= 30 && bmi < 39.9) {
+        } else if (bmi >= 24.9 && bmi < 39.9) {
           document.getElementById("hinh").src = "beocapdo1.png";
           document.getElementById("thongbao").innerHTML +=
             "Bạn bị béo phì cấp độ 1-2 ";
